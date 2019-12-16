@@ -5,7 +5,7 @@ import { ActivatedRouteStub, RouterStub } from '@testing/stubs';
 import { NavigationService } from './navigation.service';
 
 describe('NavigationService', () => {
-    let templateService: NavigationService;
+    let navigationService: NavigationService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -15,12 +15,12 @@ describe('NavigationService', () => {
                 { provide: Router, useValue: new RouterStub() },
             ],
         });
-        templateService = TestBed.get(NavigationService);
+        navigationService = TestBed.get(NavigationService);
     });
 
     describe('sideNavVisible$', () => {
         it('should return Observable<boolean>', () => {
-            templateService.sideNavVisible$().subscribe(response => {
+            navigationService.sideNavVisible$().subscribe(response => {
                 expect(response).toEqual(true);
             });
         });
