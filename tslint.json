@@ -63,6 +63,7 @@
             "timeEnd",
             "trace"
         ],
+        "no-duplicate-imports": true,
         "no-empty": false,
         "no-host-metadata-property": true,
         "no-inferrable-types": [
