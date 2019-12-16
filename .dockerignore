@@ -1,0 +1,6 @@
+*
+!dist
+!dist-debug
+!scripts/docker/start-nginx.sh
+!nginx.conf
+!version

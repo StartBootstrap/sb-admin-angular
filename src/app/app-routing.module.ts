@@ -34,6 +34,17 @@ const routes: Routes = [
         loadChildren: () =>
             import('modules/tables/tables-routing.module').then(m => m.TablesRoutingModule),
     },
+    {
+        path: 'version',
+        loadChildren: () =>
+            import('modules/utility/utility-routing.module').then(m => m.UtilityRoutingModule),
+    },
+    {
+        path: '**',
+        pathMatch: 'full',
+        loadChildren: () =>
+            import('modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
+    },
 ];
 
 @NgModule({

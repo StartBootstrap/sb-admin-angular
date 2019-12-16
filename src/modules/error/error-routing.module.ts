@@ -43,6 +43,11 @@ export const ROUTES: Routes = [
             title: 'Error 500 - SB Admin Angular',
         } as SBRouteData,
     },
+    {
+        path: '**',
+        pathMatch: 'full',
+        component: errorContainers.Error404Component,
+    },
 ];
 
 @NgModule({
