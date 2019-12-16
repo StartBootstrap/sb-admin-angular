@@ -1,0 +1,30 @@
+li.nav-item.dropdown.dropdown-user.no-caret(
+    *ngIf='userService.user$ | async as user',
+    ngbDropdown,
+    placement='bottom-right',
+    display='dynamic'
+)
+    a#userDropdown.nav-link.dropdown-toggle(
+        ngbDropdownToggle,
+        data-cy='userMenu',
+        role='button',
+        aria-haspopup='true',
+        aria-expanded='false'
+    )
+        fa-icon([icon]='["fas", "user"]')
+    .dropdown-menu.dropdown-menu-right(
+        ngbDropdownMenu,
+        aria-labelledby='dropdownUser'
+    )
+        h6.dropdown-header
+            .dropdown-user-details
+                .dropdown-user-details-name {{ user.firstName }} {{ user.lastName }}
+                .dropdown-user-details-email {{ user.email }}
+        .dropdown-divider
+        a.dropdown-item(routerLink='/dashboard')
+            | Settings
+        a.dropdown-item(routerLink='/dashboard')
+            | Activity Log
+        .dropdown-divider
+        a.dropdown-item(routerLink='/dashboard')
+            | Logout

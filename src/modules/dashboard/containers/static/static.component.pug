@@ -1,0 +1,12 @@
+sb-layout-dashboard([static]='true')
+    sb-dashboard-head(title='Dashboard Static', [hideBreadcrumbs]='false')
+    sb-dashboard-cards
+    sb-dashboard-charts
+    sb-dashboard-tables
+    sb-card
+        .card-header
+            fa-icon.mr-1([icon]='["fas", "chart-pie"]')
+            | Pie Chart Example
+        .card-body
+            sb-charts-pie
+        .card-footer.small.text-muted Updated yesterday at 11:59 PM

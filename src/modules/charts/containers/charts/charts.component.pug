@@ -1,0 +1,35 @@
+sb-layout-dashboard
+    sb-dashboard-head(title='Charts', [hideBreadcrumbs]='false')
+
+    sb-card
+        .card-body.
+            Chart.js is a third party plugin that is used to generate the charts in this template. 
+            The charts below have been customized - for further customization options, please visit the official
+            <a target='_blank' href='https://www.chartjs.org/docs/latest/'>Chart.js documentation</a>.
+
+    sb-card
+        .card-header
+            fa-icon.mr-1([icon]='["fas", "chart-area"]')
+            | Area Chart Example
+        .card-body
+            sb-charts-area
+        .card-footer.small.text-muted Updated yesterday at 11:59 PM
+
+
+    .row
+        .col-lg-6
+            sb-card
+                .card-header
+                    fa-icon.mr-1([icon]='["fas", "chart-bar"]')
+                    | Bar Chart Example
+                .card-body
+                    sb-charts-bar
+                .card-footer.small.text-muted Updated yesterday at 11:59 PM
+        .col-lg-6
+            sb-card
+                .card-header
+                    fa-icon.mr-1([icon]='["fas", "chart-pie"]')
+                    | Pie Chart Example
+                .card-body
+                    sb-charts-pie
+                .card-footer.small.text-muted Updated yesterday at 11:59 PM

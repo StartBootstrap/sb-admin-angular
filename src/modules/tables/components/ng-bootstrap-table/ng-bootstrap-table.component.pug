@@ -1,0 +1,80 @@
+form
+    .form-group.form-inline
+        | Full text search: 
+        input.form-control.ml-2(
+            type='text',
+            name='searchTerm',
+            [(ngModel)]='countryService.searchTerm'
+        )
+        span.ml-3(*ngIf='countryService.loading$ | async') Loading...
+    table.table.table-striped
+        thead
+            tr
+                th(scope='col') #
+                th(
+                    scope='col',
+                    sbSortable='name',
+                    (sort)='onSort($event)'
+                ) 
+                    span Country
+                    sb-sort-icon(
+                        *ngIf='sortedColumn === "name"',
+                        [direction]='sortedDirection'
+                    )
+                th(
+                    scope='col',
+                    sbSortable='area',
+                    (sort)='onSort($event)'
+                ) 
+                    span Area
+                    sb-sort-icon(
+                        *ngIf='sortedColumn === "area"',
+                        [direction]='sortedDirection'
+                    )
+                th(
+                    scope='col',
+                    sbSortable='population',
+                    (sort)='onSort($event)'
+                ) 
+                    span Population
+                    sb-sort-icon(
+                        *ngIf='sortedColumn === "population"',
+                        [direction]='sortedDirection'
+                    )
+        tbody
+            tr(*ngFor='let country of countries$ | async')
+                th(scope='row') {{ country.id }}
+                td
+                    img.mr-2(
+                        [src]='\'https://upload.wikimedia.org/wikipedia/commons/\' + country.flag',
+                        style='width: 20px'
+                    )
+                    ngb-highlight(
+                        [result]='country.name',
+                        [term]='countryService.searchTerm'
+                    )
+                td
+                    ngb-highlight(
+                        [result]='country.area | number',
+                        [term]='countryService.searchTerm'
+                    )
+                td
+                    ngb-highlight(
+                        [result]='country.population | number',
+                        [term]='countryService.searchTerm'
+                    )
+    .d-flex.justify-content-between.p-2
+        ngb-pagination(
+            [collectionSize]='total$ | async',
+            [(page)]='countryService.page',
+            [pageSize]='countryService.pageSize'
+        )
+
+        select.custom-select(
+            style='width: auto',
+            name='pageSize',
+            [(ngModel)]='countryService.pageSize'
+        )
+            option([ngValue]='2') 2 items per page
+            option([ngValue]='4') 4 items per page
+            option([ngValue]='6') 6 items per page
