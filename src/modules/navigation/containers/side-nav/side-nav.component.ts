@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class SideNavComponent implements OnInit, OnDestroy {
     @Input() sidenavStyle!: string;
     @Input() sideNavItems!: SideNavItems;
-    @Input() sideNavSections!: SideNavSection;
+    @Input() sideNavSections!: SideNavSection[];
 
     subscription: Subscription = new Subscription();
     routeDataSubscription!: Subscription;

@@ -2,12 +2,15 @@
     "name": "sb-admin-angular",
     "version": "0.0.0",
     "scripts": {
+        "build": "npm run build:pug && npm run ng -- build --prod --build-optimizer=true --statsJson=true",
+        "build:debug": "npm run build:pug && npm run ng -- build --prod --source-map --build-optimizer=true --statsJson=true",
         "build:pug": "node scripts/build-pug.js",
-        "build": "npm run ng -- build",
+        "bundle-report": "webpack-bundle-analyzer dist/sb-admin-angular/stats-es2015.json",
         "e2e": "npm run ng -- e2e",
         "lint:fix": "npm run ng -- lint --fix",
         "lint": "npm run ng -- lint",
         "ng": "./node_modules/.bin/ng",
+        "serve": "./node_modules/.bin/static-server dist/sb-admin-angular",
         "start": "node scripts/start.js",
         "test": "npm run ng -- test"
     },
@@ -26,6 +29,7 @@
         "@fortawesome/free-brands-svg-icons": "5.12.0",
         "@fortawesome/free-regular-svg-icons": "5.12.0",
         "@fortawesome/free-solid-svg-icons": "5.12.0",
+        "@inip/static-server": "^1.0.0",
         "@ng-bootstrap/ng-bootstrap": "5.1.4",
         "@prettier/plugin-pug": "1.1.0",
         "chart.js": "2.9.3",
@@ -33,6 +37,7 @@
         "rxjs": "6.5.3",
         "tslib": "1.10.0",
         "uuid": "3.3.3",
+        "webpack-bundle-analyzer": "^3.6.0",
         "zone.js": "0.10.2"
     },
     "devDependencies": {
