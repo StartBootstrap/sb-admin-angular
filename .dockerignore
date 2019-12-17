@@ -1,6 +1,8 @@
 *
-!dist
-!dist-debug
-!scripts/docker/start-nginx.sh
+!.dockerignore
+!Dockerfile
+!dist/**
+!dist-debug/**
+!scripts/**
 !nginx.conf
 !version
