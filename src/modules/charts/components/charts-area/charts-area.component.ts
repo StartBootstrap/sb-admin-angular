@@ -15,7 +15,7 @@ import { Chart } from 'chart.js';
     styleUrls: ['charts-area.component.scss'],
 })
 export class ChartsAreaComponent implements OnInit, AfterViewInit {
-    @ViewChild('myAreaChart', { static: false }) myAreaChart!: ElementRef<HTMLCanvasElement>;
+    @ViewChild('myAreaChart') myAreaChart!: ElementRef<HTMLCanvasElement>;
     chart!: Chart;
 
     constructor() {}

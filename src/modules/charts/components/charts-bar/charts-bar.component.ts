@@ -15,7 +15,7 @@ import { Chart } from 'chart.js';
     styleUrls: ['charts-bar.component.scss'],
 })
 export class ChartsBarComponent implements OnInit, AfterViewInit {
-    @ViewChild('myBarChart', { static: false }) myBarChart!: ElementRef<HTMLCanvasElement>;
+    @ViewChild('myBarChart') myBarChart!: ElementRef<HTMLCanvasElement>;
     chart!: Chart;
 
     constructor() {}

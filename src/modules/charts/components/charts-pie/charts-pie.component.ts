@@ -15,7 +15,7 @@ import { Chart } from 'chart.js';
     styleUrls: ['charts-pie.component.scss'],
 })
 export class ChartsPieComponent implements OnInit, AfterViewInit {
-    @ViewChild('myPieChart', { static: false }) myPieChart!: ElementRef<HTMLCanvasElement>;
+    @ViewChild('myPieChart') myPieChart!: ElementRef<HTMLCanvasElement>;
     chart!: Chart;
 
     constructor() {}
