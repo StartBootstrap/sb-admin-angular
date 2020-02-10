@@ -7,7 +7,7 @@ It shares the same project structure and subset of tooling from our professional
 so much of the [SB Admin Pro Angular Documentation](https://docs.startbootstrap.com/sb-admin-pro-angular/quickstart) is applicable.
 
 In particular the documentation for [Structure](https://docs.startbootstrap.com/sb-admin-pro-angular/structure-root-level),
-and the documentation for [SBPro Scematics](https://docs.startbootstrap.com/sb-admin-pro-angular/development-general#sb-pro-schematics)
+and the documentation for [SBPro Schematics](https://docs.startbootstrap.com/sb-admin-pro-angular/development-general#sb-pro-schematics)
 
 SB Admin Angular comes with a base implementation of navigation and layouts.
 
