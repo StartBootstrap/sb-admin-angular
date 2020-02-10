@@ -12,7 +12,7 @@
         "e2e": "npm run ng -- e2e",
         "lint:fix": "npm run ng -- lint --fix",
         "lint": "npm run ng -- lint",
-        "ng": "./node_modules/.bin/ng",
+        "ng": "node --max_old_space_size=2048 ./node_modules/.bin/ng",
         "serve": "./node_modules/.bin/static-server dist/sb-admin-angular",
         "start": "node scripts/start.js",
         "test": "npm run ng -- test"
