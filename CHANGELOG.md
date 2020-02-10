@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Added] Document how to use --max-old-space-size
 - [Added] Typings folder in `src/typings`
 - [Added] `.markdownlint.json`
+- [Added] @sbpro/ng - for SBPro Schematics
+- [Changed] Updated to Angular 9
+- [Changed] Updated other dependencies
+- [Changed] Docker run script to check for running container first.
 
 ## [1.0.0] - 2020-01-13
 
