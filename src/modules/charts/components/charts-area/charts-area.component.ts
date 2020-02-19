@@ -54,7 +54,7 @@ export class ChartsAreaComponent implements OnInit, AfterViewInit {
                         pointHitRadius: 50,
                         pointBorderWidth: 2,
                         data: [
-                            10000,
+                            40000,
                             30162,
                             26263,
                             18394,
