@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule, DecimalPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 /* Modules */
 import { AppCommonModule } from '@common/app-common.module';
@@ -30,7 +29,6 @@ import * as tablesServices from './services';
         RouterModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientModule,
         AppCommonModule,
         NavigationModule,
     ],
