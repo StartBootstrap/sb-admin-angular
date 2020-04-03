@@ -10,7 +10,7 @@ describe('Tables Guards', () => {
             imports: [],
             providers: [TablesGuard],
         });
-        tablesGuard = TestBed.get(TablesGuard);
+        tablesGuard = TestBed.inject(TablesGuard);
     });
 
     describe('canActivate', () => {

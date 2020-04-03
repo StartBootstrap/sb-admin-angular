@@ -12,7 +12,7 @@ describe('UserService', () => {
         TestBed.configureTestingModule({
             providers: [UserService],
         });
-        userService = TestBed.get(UserService);
+        userService = TestBed.inject(UserService);
     });
 
     describe('getUser$', () => {

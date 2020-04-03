@@ -9,7 +9,7 @@ describe('SideNavService', () => {
         TestBed.configureTestingModule({
             providers: [SideNavService],
         });
-        sideNavService = TestBed.get(SideNavService);
+        sideNavService = TestBed.inject(SideNavService);
     });
 
     describe('isExpanded', () => {

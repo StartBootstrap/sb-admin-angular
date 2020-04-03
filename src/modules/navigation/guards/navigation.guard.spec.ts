@@ -10,7 +10,7 @@ describe('Navigation Guards', () => {
             imports: [],
             providers: [NavigationGuard],
         });
-        navigationGuard = TestBed.get(NavigationGuard);
+        navigationGuard = TestBed.inject(NavigationGuard);
     });
 
     describe('canActivate', () => {

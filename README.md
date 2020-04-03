@@ -84,11 +84,11 @@ Obviously this can become subjective, but MVCC is the paradigm that we subscribe
 
 ### npm start
 
-If you receive memory issues (most likely on Linux, but could technically happen on any system) adjust
+If you receive memory issues adjust
 `max_old_space_size` in the `ng` command of the `package.json`:
 
 ```json
-"ng": "node --max_old_space_size=2048 ./node_modules/.bin/ng",
+"ng": "cross-env NODE_OPTIONS=--max_old_space_size=2048 ./node_modules/.bin/ng",
 ```
 
 You can adjust 2048 to any number you need.

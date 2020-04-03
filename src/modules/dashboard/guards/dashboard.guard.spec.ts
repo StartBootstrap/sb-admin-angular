@@ -10,7 +10,7 @@ describe('Dashboard Guards', () => {
             imports: [],
             providers: [DashboardGuard],
         });
-        dashboardGuard = TestBed.get(DashboardGuard);
+        dashboardGuard = TestBed.inject(DashboardGuard);
     });
 
     describe('canActivate', () => {

@@ -13,7 +13,7 @@ describe('Utility Guards', () => {
                 UtilityGuard,
             ],
         });
-        utilityGuard = TestBed.get(UtilityGuard);
+        utilityGuard = TestBed.inject(UtilityGuard);
     });
 
     describe('canActivate', () => {

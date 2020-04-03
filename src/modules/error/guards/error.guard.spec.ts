@@ -10,7 +10,7 @@ describe('Error Guards', () => {
             imports: [],
             providers: [ErrorGuard],
         });
-        errorGuard = TestBed.get(ErrorGuard);
+        errorGuard = TestBed.inject(ErrorGuard);
     });
 
     describe('canActivate', () => {
