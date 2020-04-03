@@ -10,7 +10,7 @@ describe('CountryService', () => {
         TestBed.configureTestingModule({
             providers: [CountryService, DecimalPipe],
         });
-        countryService = TestBed.get(CountryService);
+        countryService = TestBed.inject(CountryService);
     });
 
     describe('countries$', () => {

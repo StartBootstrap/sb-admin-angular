@@ -9,7 +9,7 @@ describe('DashboardService', () => {
         TestBed.configureTestingModule({
             providers: [DashboardService],
         });
-        dashboardService = TestBed.get(DashboardService);
+        dashboardService = TestBed.inject(DashboardService);
     });
 
     describe('getDashboard$', () => {

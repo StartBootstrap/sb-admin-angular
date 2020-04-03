@@ -10,7 +10,7 @@ describe('Auth Guards', () => {
             imports: [],
             providers: [AuthGuard],
         });
-        authGuard = TestBed.get(AuthGuard);
+        authGuard = TestBed.inject(AuthGuard);
     });
 
     describe('canActivate', () => {

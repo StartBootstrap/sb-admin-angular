@@ -16,10 +16,10 @@ describe('UtilityService', () => {
             imports: [HttpClientTestingModule],
             providers: [UtilityService],
         });
-        utilityService = TestBed.get(UtilityService);
+        utilityService = TestBed.inject(UtilityService);
 
-        httpClient = TestBed.get(HttpClient);
-        httpTestingController = TestBed.get(HttpTestingController);
+        httpClient = TestBed.inject(HttpClient);
+        httpTestingController = TestBed.inject(HttpTestingController);
     });
 
     describe('getUtility$', () => {

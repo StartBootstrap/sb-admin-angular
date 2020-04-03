@@ -9,7 +9,7 @@ describe('AppCommonService', () => {
         TestBed.configureTestingModule({
             providers: [AppCommonService],
         });
-        appCommonService = TestBed.get(AppCommonService);
+        appCommonService = TestBed.inject(AppCommonService);
     });
 
     describe('getAppCommon$', () => {

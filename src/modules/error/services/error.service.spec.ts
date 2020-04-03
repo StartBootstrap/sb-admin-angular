@@ -9,7 +9,7 @@ describe('ErrorService', () => {
         TestBed.configureTestingModule({
             providers: [ErrorService],
         });
-        errorService = TestBed.get(ErrorService);
+        errorService = TestBed.inject(ErrorService);
     });
 
     describe('getError$', () => {

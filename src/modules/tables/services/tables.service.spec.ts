@@ -9,7 +9,7 @@ describe('TablesService', () => {
         TestBed.configureTestingModule({
             providers: [TablesService],
         });
-        tablesService = TestBed.get(TablesService);
+        tablesService = TestBed.inject(TablesService);
     });
 
     describe('getTables$', () => {

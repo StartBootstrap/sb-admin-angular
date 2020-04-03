@@ -51,7 +51,7 @@ describe('LayoutDashboardComponent', () => {
         component = componentDE.componentInstance;
         componentNE = componentDE.nativeElement;
 
-        navigationService = TestBed.get(NavigationService);
+        navigationService = TestBed.inject(NavigationService);
 
         fixture.detectChanges();
     });

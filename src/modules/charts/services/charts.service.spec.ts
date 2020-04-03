@@ -9,7 +9,7 @@ describe('ChartsService', () => {
         TestBed.configureTestingModule({
             providers: [ChartsService],
         });
-        chartsService = TestBed.get(ChartsService);
+        chartsService = TestBed.inject(ChartsService);
     });
 
     describe('getCharts$', () => {

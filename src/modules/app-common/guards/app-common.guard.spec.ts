@@ -10,7 +10,7 @@ describe('App Common Guards', () => {
             imports: [],
             providers: [AppCommonGuard],
         });
-        appCommonGuard = TestBed.get(AppCommonGuard);
+        appCommonGuard = TestBed.inject(AppCommonGuard);
     });
 
     describe('canActivate', () => {

@@ -10,7 +10,7 @@ describe('Charts Guards', () => {
             imports: [],
             providers: [ChartsGuard],
         });
-        chartsGuard = TestBed.get(ChartsGuard);
+        chartsGuard = TestBed.inject(ChartsGuard);
     });
 
     describe('canActivate', () => {

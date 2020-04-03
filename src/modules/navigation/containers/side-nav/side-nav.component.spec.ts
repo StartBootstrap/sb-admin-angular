@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UserService } from '@modules/auth/services';
 import { NavigationService } from '@modules/navigation/services';
-import { NavigationServiceStub } from '@testing/stubs';
+import { NavigationServiceStub, UserServiceStub } from '@testing/stubs';
 
 import { SideNavComponent } from './side-nav.component';
 
@@ -28,6 +28,7 @@ describe('SideNavComponent', () => {
     let componentNE: Element;
 
     let navigationService: NavigationService;
+    let userService: UserService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -35,7 +36,7 @@ describe('SideNavComponent', () => {
             imports: [NoopAnimationsModule],
             providers: [
                 { provide: NavigationService, useValue: NavigationServiceStub },
-                UserService,
+                { provide: UserService, useValue: UserServiceStub },
             ],
             schemas: [NO_ERRORS_SCHEMA],
         }).compileComponents();
@@ -49,7 +50,8 @@ describe('SideNavComponent', () => {
         component = componentDE.componentInstance;
         componentNE = componentDE.nativeElement;
 
-        navigationService = TestBed.get(NavigationService);
+        navigationService = TestBed.inject(NavigationService);
+        userService = TestBed.inject(UserService);
 
         fixture.detectChanges();
     });

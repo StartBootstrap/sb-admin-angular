@@ -15,7 +15,7 @@ describe('NavigationService', () => {
                 { provide: Router, useValue: new RouterStub() },
             ],
         });
-        navigationService = TestBed.get(NavigationService);
+        navigationService = TestBed.inject(NavigationService);
     });
 
     describe('sideNavVisible$', () => {

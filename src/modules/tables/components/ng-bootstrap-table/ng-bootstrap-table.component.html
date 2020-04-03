@@ -12,7 +12,7 @@
         <tbody>
             <tr *ngFor="let country of countries$ | async">
                 <th scope="row">{{ country.id }}</th>
-                <td><img class="mr-2" [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" style="width: 20px" /><ngb-highlight [result]="country.name" [term]="countryService.searchTerm"></ngb-highlight></td>
+                <td><img class="mr-2" [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" style="width: 20px;" /><ngb-highlight [result]="country.name" [term]="countryService.searchTerm"></ngb-highlight></td>
                 <td><ngb-highlight [result]="country.area | number" [term]="countryService.searchTerm"></ngb-highlight></td>
                 <td><ngb-highlight [result]="country.population | number" [term]="countryService.searchTerm"></ngb-highlight></td>
             </tr>
@@ -20,7 +20,7 @@
     </table>
     <div class="d-flex justify-content-between p-2">
         <ngb-pagination [collectionSize]="total$ | async" [(page)]="countryService.page" [pageSize]="countryService.pageSize"></ngb-pagination
-        ><select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="countryService.pageSize"
+        ><select class="custom-select" style="width: auto;" name="pageSize" [(ngModel)]="countryService.pageSize"
             ><option [ngValue]="2">2 items per page</option
             ><option [ngValue]="4">4 items per page</option
             ><option [ngValue]="6">6 items per page</option></select
