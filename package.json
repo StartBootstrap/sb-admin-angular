@@ -1,6 +1,6 @@
 {
     "name": "sb-admin-angular",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "scripts": {
         "build": "npm run build:pug && npm run ng -- build --prod --build-optimizer=true --statsJson=true && npm run build:version",
         "build:debug": "npm run build:pug && npm run ng -- build --prod --source-map --build-optimizer=true --statsJson=true && npm run build:version",
