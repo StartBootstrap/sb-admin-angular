@@ -73,7 +73,7 @@
         "karma-jasmine-html-reporter": "1.5.4",
         "prettier": "2.1.2",
         "protractor": "7.0.0",
-        "pug": "3.0.0",
+        "pug": "3.0.1",
         "pug-lint": "2.6.0",
         "shelljs": "0.8.4",
         "ts-node": "9.0.0",
